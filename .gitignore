@@ -1,0 +1,8 @@
+# Binaries
+/bin/
+
+#Eclipse
+.project
+.classpath
+.settings/
+src.module-info.java
