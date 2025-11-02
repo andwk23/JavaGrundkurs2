@@ -1,5 +1,4 @@
 package de.grundlagen2.bmi.model;
 
-public class Katze {
-
+public class Katze extends Lebewesen {
 }
