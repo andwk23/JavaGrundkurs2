@@ -53,7 +53,7 @@ public class App {
 		
 		
 		while(true) {
-			System.out.print("BMI [1=Katze 2=Fisch] > ");			
+			System.out.print("BMI [1=Katze 2=Fisch 9 = Abbruch] > ");			
 			int lebewesenTyp = scanner.nextInt();
 			
 			if(lebewesenTyp == 1) {
@@ -64,9 +64,12 @@ public class App {
 				lebewesen = new Fisch();
 				break;
 			}
+			else if(lebewesenTyp == 9) {
+				break;
+			}
 
 			else {
-				System.out.println("BMI [Falsche Eingabe!]");
+				System.out.println("BMI [Falsche Eingabe!]\n[--- Versuche es noch einmal ---]");
 			}
 		}
 		
@@ -75,6 +78,8 @@ public class App {
 		}
 		else if(lebewesen instanceof Fisch) {
 			System.out.println("BMI [Neuer Fisch]");
+		}else {
+			return;
 		}
 		
 		System.out.print("BMI [Geben Sie den Namen ein] > ");
