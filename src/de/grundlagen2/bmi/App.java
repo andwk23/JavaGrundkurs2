@@ -40,12 +40,12 @@ public class App {
 			}
 
 			else {
-				System.out.println("BMI [Falsche Eingabe!]");
+				System.out.println("BMI [Falsche Eingabe!]\n[Versuche es noch einmal]");
 			}
 		}
 		
 		scanner.close();
-		System.out.println("BMI [Programm ist beendet]");
+		System.out.println("\nBMI [Programm ist beendet]");
 	}
 	
 	// Umbau nach dem EVA-Prinzip (Eingabe, Verarbeite, Ausgabe)
