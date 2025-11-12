@@ -11,7 +11,8 @@ public class App {
 	
 	private Scanner scanner = new Scanner(System.in);
 	private Lebewesen lebewesen;
-	private String ergebnis;
+	private String[] ergebnissse = new String[BMIRechner.MAX_ANZAHL];
+	private int index = -1;
 
 	public static void main(String[] args) {
 		new App();
@@ -21,7 +22,7 @@ public class App {
 	private App() {
 		System.out.println("BMI [Programm ist gestartet]");
 		
-		while (true) {
+		while (true && index < BMIRechner.MAX_ANZAHL) {
 			System.out.print("BMI [1=Eingabe 2=Verarbeiten 3=Ausgabe 4=Beenden] > ");
 			int auswahl = scanner.nextInt();
 			
@@ -97,11 +98,18 @@ public class App {
 
 	private void verarbeite() {		// V
 		BMIRechner rechner = new BMIRechner();
-		ergebnis = rechner.pruefe(lebewesen);
+		ergebnissse[++index] = rechner.pruefe(lebewesen);
 	}
 	
 	private void gibAus() {			// A
-		System.out.println("BMI [ergebnis = " + ergebnis + "]");
+		int i = -1;
+		for(String ergebnis : ergebnissse) {
+			if(++i > index) {
+				break;
+			}
+			System.out.println("BMI [ergebnis = " + ergebnis + "]");
+		}
+		
 	}
 
 }

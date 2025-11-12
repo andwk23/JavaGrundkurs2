@@ -6,6 +6,7 @@ public class BMIRechner {
 	
 	public final static double BMI_MAX = 25.0;
 	public final static double BMI_MIN = 18.5;
+	public final static int MAX_ANZAHL = 100;
 	
 	public String pruefe(Lebewesen lebewesen) {
 		double bmi = lebewesen.getGewicht() / (lebewesen.getGroesse() * lebewesen.getGroesse());
